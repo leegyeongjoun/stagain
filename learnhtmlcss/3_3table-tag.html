@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table tag</title>
+    <style>
+      table {
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 12px;
+      }
+      .col1 {
+        width: 80px;
+      }
+      .col2 {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Table 기본</h1>
+    <table>
+      <caption>
+        프로필 테이블
+      </caption>
+      <!-- tr은 표 행을 의미하는 태그 -->
+      <tr>
+        <!-- th는 제목열 td은 일반열(일반데이터) 태그 -->
+        <th>이름</th>
+        <th>취미</th>
+        <th>특기</th>
+      </tr>
+      <tr>
+        <td>홍길동</td>
+        <td>도술</td>
+        <td>축지법</td>
+      </tr>
+      <tr>
+        <td>이경준</td>
+        <td>긍정</td>
+        <td>가자</td>
+      </tr>
+    </table>
+    <hr />
+    <h1>Table 그룹 태그</h1>
+    <table>
+      <caption>
+        학급점수
+      </caption>
+      <!-- colgroup과 col을 사용하여 각각의 열의 옵션을 지정 해줄 수있다. -->
+      <colgroup>
+        <col class="col1" />
+        <col class="col2" />
+        <col class="col3" />
+        <col class="col4" />
+        <col class="col5" />
+        <col class="col6" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>반</th>
+          <th>이름</th>
+          <th>국어</th>
+          <th>영어</th>
+          <th>수학</th>
+          <th>코딩</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- rowspan은 행을 병합한다. rowspan="병합하고 싶은 갯수를 작성" tbody와 tfoot은 다른 그룹이기때문에 병합아 안된다.-->
+          <td rowspan="2">1반</td>
+          <td>홍길동</td>
+          <td>90</td>
+          <td>100</td>
+          <td>90</td>
+          <td>81</td>
+        </tr>
+        <tr>
+          <td>이경준</td>
+          <td>85</td>
+          <td>81</td>
+          <td>94</td>
+          <td>77</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <!-- colspan은 열을 병합해주기때문에 병합하고 싶은 칸수를 작성하면된다. -->
+          <td colspan="2">평균</td>
+          <td>80.5</td>
+          <td>90.5</td>
+          <td>70.5</td>
+          <td>72.5</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
