@@ -5,14 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>img media</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: chartreuse;
+        border: 1px solid darkslategray;
+      }
+    </style>
   </head>
   <body>
     <h2>이미지 태그</h2>
-    <!-- 절대경로는 이미지의 절대적인 고유한 경로를 지정하는 것이다. -->
-    <!-- 상대경로는 현재 문서를 기준으로 경로를 인식하는 방법이다. -->
-    <img width="200" src="../love.png" alt="사랑" />
-    <img height="120" src="../love.png" alt="사랑" />
+    <!-- 절대경로는 이미지의 절대적인 고유한 경로를 지정하는 것이다. http~, /~-->
+    <!-- 상대경로는 현재 문서를 기준으로 경로를 인식하는 방법이다. ./ ../-->
+    <img width="200" src="../assets/images/love.png" alt="사랑" />
+    <img height="120" src="../assets/images/love.png"" alt="사랑" />
     <!-- 최상위 디렉토리는 프로젝트 안에 최상의 디렉토리 루트 디렉토리!! -->
-    <img height="120" src="/images/panda.jpg" alt="판다" />
+    <img height="120" src="/assets/images/panda.jpg" alt="판다" />
+
+    <h2>오디오 태그</h2>
+    <!-- controls가 있으면 control바가 생김 -->
+    <audio src="../assets/audio.mp3" controls></audio>
+
+    <!-- controls가 없으면 이미지만 나오게된다  -->
+    <!-- autoplay는 오디오나 비디오를 자동으로 실행 
+         크롬 파이어폭스에서 자동재생을 사용하고 싶다면 muted 사용
+         loop는 오디오나 비디오를 반복재생
+         muted 오디오나 비디오의 소리를 제거
+         preload 페이지를 불러올 때 오디오나 비디오 파일을 어떻게 로딩할 것인지 지정한다. 사용할 수있는 값은 auto metadata none이다. 기본값으로는 preload="auto" 이다.
+         poster="파일이름" viedo태그에서 사용하는 속성으로, 비디오가 재생되기 전까지 화면에 표시 될 포스터 이미지를 지정한다.
+    -->
+    <h2>비디오 태그</h2>
+    <video
+      src="../assets/video.mp4"
+      poster="/assets/images/love.png"
+      controls
+      type="video/mp4"
+    ></video>
+
+    <h2>하이퍼링크</h2>
+    <a href="http://www.naver.com" target="_blank">네이버</a> 와
+    <a href="http://www.google.com" target="_blank">구글</a> 은 포털 사이트
+    이다.
+    <a href="#target">target 으로 이동</a>
+    <!-- 메일을 보내기 위해서 -->
+    <a href="mailto:mirrorright.naver.com">이메일 보내기</a>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <div>14</div>
+    <div>15</div>
+    <div>16</div>
+    <div>17</div>
+    <div>18</div>
+    <div id="target">19</div>
+    <div>20</div>
+    <div>21</div>
+    <div>22</div>
+    <div>23</div>
+    <div>24</div>
+    <div>25</div>
+    <div>26</div>
+    <div>27</div>
+    <div>28</div>
+    <div>29</div>
+    <div>30</div>
   </body>
 </html>
