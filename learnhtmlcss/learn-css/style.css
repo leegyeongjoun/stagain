@@ -1,3 +1,6 @@
+/* 
+외부 스타일
+*/
 h1 {
   color: blue;
 }
@@ -5,3 +8,7 @@ h1 {
   border: 1px solid black;
   padding: 30px;
 }
+/* 
+css출처 적용 우선순위 
+사용자 !important > 제작자 !important > 제작자 > 사용자 > 브라우저
+*/
