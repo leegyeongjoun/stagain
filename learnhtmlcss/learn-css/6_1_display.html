@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+    <style>
+      div,
+      h2 {
+        border: 1px solid #ddd;
+        /* html요소는 보이지 않지만 영역도 없음 */
+        /* display: none; */
+        /* html요소는 보이지 않지만 영역은 차지 */
+        /* visibility: hidden; */
+      }
+      span,
+      a {
+        border: 1px solid #ccc;
+      }
+
+      /* 마치 인라인처럼 컨텐츠만큼 영역을 차지하고 가로로 배치 그러나 블럭의 성질도 갖고 있기 때문에 width, heigth도 됨 인라인 블럭은 상단에 네비게이션 바를 만들때 사용됨!*/
+      article > div,
+      article > span {
+        display: inline-block;
+        width: 77px;
+        height: 77px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Display Block</h1>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <h2>title</h2>
+
+    <h1>Display Inline</h1>
+    <span>content</span>
+    <span>content</span>
+    <span>content</span>
+    <span>content</span>
+    <span>content</span>
+    <a href="#">Naver</a>
+
+    <h1>Display Inline Block</h1>
+    <article>
+      <div>content</div>
+      <div>content</div>
+      <div>content</div>
+      <span>content</span>
+      <span>content</span>
+      <span>content</span>
+      <span>content</span>
+    </article>
+  </body>
+</html>

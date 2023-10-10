@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box model</title>
+    <style>
+      /* 
+      Content(widht, height로 가로 세로 너비지정 ), Padding, Margin, Border 
+      */
+      div.content {
+        background-color: rgb(208, 208, 208);
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        border: 10px solid green;
+        margin: 40px;
+      }
+      span {
+        border: 1px solid red;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+      div.padding {
+        border: 1px solid black;
+        padding: 20px 10px;
+      }
+      /* 마진 중첩 10px 20px일때는 큰쪽으로 마진이 곂친다 세로만 적용 됨 */
+      div.margin {
+        border: 1px solid red;
+        margin: 20px 10px;
+      }
+      .shape {
+        border: 1px solid red;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content"></div>
+    <span>Hello css</span>
+    <div class="padding">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+      reprehenderit fuga placeat officiis dolor labore molestias corporis totam
+      ducimus, ipsum, blanditiis sed quidem dolore voluptatibus adipisci vel
+      cupiditate, repellat
+      sunfdsfkjgkldflkglkdfeofoepwfjweojgerjgkfdlgjdf;skgjroiewopirep[dsp[afldskgop
+      kdsofkdsfo[ ekwpfkewdp[fkdfsfdsklgksd lkdslpfkdsl;t.
+    </div>
+    <div class="margin">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+      reprehenderit fuga placeat officiis dolor labore molestias corporis totam
+      ducimus, ipsum, blanditiis sed quidem dolore voluptatibus adipisci vel
+      cupiditate, repellat
+      sunfdsfkjgkldflkglkdfeofoepwfjweojgerjgkfdlgjdf;skgjroiewopirep[dsp[afldskgop
+      kdsofkdsfo[ ekwpfkewdp[fkdfsfdsklgksd lkdslpfkdsl;t.
+    </div>
+    <div class="shape" style="margin-bottom: 40px"></div>
+    <div class="shape"></div>
+  </body>
+</html>
