@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      main,
+      section,
+      article,
+      div {
+        border: 1px solid black;
+        padding: 20px;
+      }
+      main {
+        /* 최대가 600px 안넘게 */
+        max-width: 600px;
+        /* 상하는 0 좌우는 auto알아서 중앙으로오게 */
+        margin: 0 auto;
+        background: yellow;
+      }
+      section {
+        background-color: violet;
+        position: relative;
+      }
+      article {
+        background-color: cyan;
+      }
+      div {
+        background-color: white;
+      }
+      div.relative {
+        position: relative;
+        right: 20px;
+      }
+      /* absolute는 요소가 문서의 일반적인 흐름을 따르지 않게한다. absolute는 position:static 속성을 가지고 있지 않은 부모를 기준으로 움직입니다. 만약 부모 중에 포지션이 relative, absolute, fixed인 태그가 없다면 가장 위의 태그(body)가 기준이 됩니다.*/
+      div.absolute {
+        position: absolute;
+        background-color: grey;
+        top: 0;
+        left: 0;
+      }
+      /* fixed 역시 absolute와 마찬가지로 요소가 문서의 일반적인 흐름에서 제거됩니다. 대신, 스크린의 뷰포트를 기준으로 한 위치에 배치됩니다. 즉, 스크롤되어도 움직이지 않는 고정된 자리를 갖게 됩니다. */
+      div.fixed {
+        position: fixed;
+        background-color: blue;
+        bottom: 0px;
+        right: 30px;
+        border-radius: 50%;
+      }
+      /* sticky는 right, left, bottom은 적용안됨 */
+      div.sticky {
+        position: sticky;
+        /* viewport top에서 100px떨어졌을 때 고정이된다. 여기서 viewport란 웹 페이지가 브라우저 화면상에서 실제로 표시되는 영역이다. */
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      main
+      <section>
+        section
+        <article>
+          article
+          <div>static</div>
+          <div class="relative">relative</div>
+          <div class="absolute">absolute</div>
+          <div class="fixed">fixed</div>
+          <div class="sticky">sticky</div>
+          <div style="height: 1000px"></div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
