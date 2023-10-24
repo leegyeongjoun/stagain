@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform&Transition</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: lightgray;
+      }
+      .outline,
+      .box {
+        width: 60px;
+        height: 60px;
+      }
+      .outline {
+        border: 3px solid yellow;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+      .box {
+        background: blue;
+      }
+      .box1:hover {
+        transform: translate(20px, 10px);
+      }
+      .box2:hover {
+        transform: scale(2, 0.5);
+      }
+      /* rotate = rotateZ */
+      .box3:hover {
+        transform: rotateY(45deg);
+      }
+      .outline-box3 {
+        /* 입체감을 표현하기 위해서 */
+        perspective: 100px;
+      }
+      .box4:hover {
+        transform: skew(15deg, 20deg);
+      }
+
+      /* Transition */
+      .box {
+        /* transition-property: all;
+        transition-duration: 2s; */
+        /* transition-delay: 1s; */
+        /* transition-timing-function: ease-in; */
+        /* 가만히 두면 all 초가 하나면 duration 2개있으면 delay까지 */
+        transition: 2s 1s;
+      }
+      .box1:hover {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outline">
+      <div class="box box1"></div>
+    </div>
+    <div class="outline">
+      <div class="box box2"></div>
+    </div>
+    <div class="outline outline-box3">
+      <div class="box box3"></div>
+    </div>
+    <div class="outline">
+      <div class="box box4"></div>
+    </div>
+  </body>
+</html>
