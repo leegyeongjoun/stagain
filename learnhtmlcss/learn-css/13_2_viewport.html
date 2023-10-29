@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- viewport와 width가 같은 이유는 content="width=device-width 이거 덕분이다.
+      user-scaleble-no 줌 안되게 하기
+    -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1 user-scaleble=yes"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        background-color: blue;
+        /* 뷰포트 너비와 높이의 전체 vw vh */
+        width: 100vw;
+        height: 100vh;
+      }
+      /*
+       vw:뷰포트 너비. 100vw = 뷰포트 width의 100% 50vw 180px , 100vw = 360px
+       vh:뷰포트 높이. 100vh = 뷰포트 height의 100%
+       vmin:뷰포트 너비와 높이 중에서 작은 값.
+       vmax:뷰포트 너비와 높이 중에서 큰 값.
+       vw = 1vw는 뷰포트 너비의 1%입니다.
+       vh = 1vw는 뷰포트 높이의 1%입니다.
+       vmin = 뷰포트의 너비와 높이 중에서 작은 값의 1%와 같습니다.
+       vamx = 뷰포트의 너비와 높이 중에서 큰 값의 1%와 같습니다.
+       */
+    </style>
+  </head>
+  <body>
+    <h1>안녕하세요</h1>
+    <hr />
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+      voluptatem minus deleniti ad error sequi exercitationem corporis, debitis
+      temporibus iste aperiam quasi hic impedit, odit nam ut nobis neque illo!
+    </p>
+    <div></div>
+  </body>
+</html>
