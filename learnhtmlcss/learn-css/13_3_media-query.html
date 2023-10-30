@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <style>
+      /* 
+      min-width : 정한 px이상
+      max-width : 정한 px이하
+      0~400px blue
+      401px ~ 600px red
+      601px ~ yellow
+      */
+      @media (max-width: 400px) {
+        body {
+          background-color: blue;
+        }
+      }
+      @media (min-width: 401px) and (max-width: 600px) {
+        body {
+          background-color: red;
+        }
+      }
+      @media (min-width: 601px) {
+        body {
+          background-color: yellow;
+        }
+      }
+      /* 프린트 하는 곳에서 css를 바꿔주려면 */
+      @media print {
+        h1 {
+          font-size: 120px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>안녕하세요</h1>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda ut
+      nulla aliquid culpa distinctio magni rerum voluptatum sint consectetur
+      dicta laborum tempora non quae, voluptatibus facilis vel qui minima
+      dolorum.
+    </p>
+  </body>
+</html>
