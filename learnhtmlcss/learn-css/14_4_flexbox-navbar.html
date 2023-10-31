@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Navbar</title>
+    <style>
+      /* * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        list-style: none;
+        display: flex;
+        background-color: rgb(9, 39, 9);
+        height: 50px;
+        align-items: center;
+      }
+      .items {
+        color: white;
+        height: 50px;
+        flex-basis: 60px;
+        line-height: 50px;
+        text-align: center;
+      }
+      .active {
+        background-color: aqua;
+      } */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .nav-container {
+        background-color: darkslategray;
+        list-style: none;
+        display: flex;
+      }
+      .nav-item {
+        /* 패딩덕분에 가운데로 오는것처럼 보임 */
+        padding: 15px;
+        cursor: pointer;
+      }
+      .nav-item:hover {
+        background-color: deeppink;
+      }
+      .nav-item > a {
+        text-align: center;
+        text-decoration: none;
+        color: white;
+      }
+      .nav-item:nth-child(1) {
+        background-color: deeppink;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <ul class="container">
+      <li class="items active">홈</li>
+      <li class="items">상품</li>
+      <li class="items">장바구니</li>
+      <li class="items">마이페이지</li>
+    </ul> -->
+    <nav>
+      <ul class="nav-container">
+        <li class="nav-item"><a href="#">홈</a></li>
+        <li class="nav-item"><a href="#">상품</a></li>
+        <li class="nav-item"><a href="#">장바구니</a></li>
+        <li class="nav-item"><a href="#">마이페이지</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

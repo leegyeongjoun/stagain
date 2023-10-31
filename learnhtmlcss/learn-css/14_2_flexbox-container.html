@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flexbox Basic</title>
+    <title>Flexbox Container</title>
     <style>
       * {
         margin: 0;
@@ -18,7 +18,12 @@
         /* flex-direction: row;
         flex-wrap: wrap-reverse; */
         flex-flow: row wrap;
-        width: 500px;
+        /* justify-content: space-between; 가로정렬 */
+        /* align-content 세로정렬 flexbox라인이 있다고 가정을 할 때 라인 전체가 움직인다. 즉, flex line을 정렬한다. */
+        align-content: center;
+        /* align-items는 기본값이 stretch가 기본값이다. 쭉 뻗어서 나옴 컨테이너에 높이에 맞게 */
+        /* align-items: center; */
+        /* align-items는 각각의 라인 있다고 생각했을 때 라인을 기준으로 상 중간 하로 정렬 즉, flex line을 기준으로 정렬한다.*/
       }
       .flex-item {
         color: white;
