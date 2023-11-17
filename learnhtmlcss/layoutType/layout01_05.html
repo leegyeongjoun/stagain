@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>레이아웃 유형02 grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #fff3e0;
+      }
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        /* 영역설정 */
+        grid-template-areas:
+          'header header'
+          'nav nav'
+          'aside section'
+          'footer footer';
+        /* 가로 값 */
+        grid-template-columns: 400px 800px;
+        /* 세로값 부분마다 정해줄 수있음 */
+        grid-template-rows: 100px 100px 780px 100px;
+      }
+      #header {
+        background-color: #ffe0b2;
+        grid-area: header;
+      }
+      #nav {
+        background-color: #ffcc80;
+        grid-area: nav;
+      }
+      /* float을 쓰면 높이가 0이되는 버그가 생김 */
+      #aside {
+        background-color: #ffb74d;
+        grid-area: aside;
+      }
+      #section {
+        background-color: #ffa726;
+        grid-area: section;
+      }
+      #footer {
+        background-color: #ff9800;
+        grid-area: footer;
+      }
+
+      /* 미디어쿼리 */
+      @media (max-width: 1300px) {
+        #wrap {
+          width: 96%;
+        }
+      }
+      @media (max-width: 768px) {
+        #wrap {
+        }
+      }
+      @media (max-width: 480px) {
+        #aside {
+        }
+        #section {
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header"></header>
+      <nav id="nav"></nav>
+      <aside id="aside"></aside>
+      <section id="section"></section>
+      <footer id="footer"></footer>
+    </div>
+
+    <!-- 
+      layout01_01 : float 방식 레이아웃
+      layout01_02 : float 방식 반응형 레이아웃
+      layout01_03 : flex 방식 레이아웃
+      layout01_04 : flex 방식 반응형 레이아웃
+      layout01_05 : grid 방식 레이아웃
+
+   -->
+  </body>
+</html>
