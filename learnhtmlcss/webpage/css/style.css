@@ -1,6 +1,5 @@
 @charset "utf-8";
 /* 언어설정 */
-
 /* 스킵 내비게이션 */
 #skip {
   position: relative;
@@ -21,45 +20,27 @@
   top: 0;
 }
 /* 레이아웃 */
-#wrap {
-  width: 100%;
-}
 #header {
-  width: 100%;
   height: 325px;
   background: url(../img/header_bg.jpg) repeat-x center top;
 }
-#content {
-  width: 100%;
-  height: 800px;
-  background: #222;
-}
 #footer {
-  width: 100%;
   height: 200px;
   background: #333;
 }
 
 /* 컨텐츠 레이아웃 */
 #con_nav {
-  width: 100%;
-  height: 200px;
-  background: #333;
+  background: #f6fdff;
 }
 #con_tit {
-  width: 100%;
-  height: 200px;
-  background: #444;
+  background: #eaf7fd;
 }
 #con_ban {
-  width: 100%;
-  height: 200px;
-  background: #555;
+  background: #dceff7;
 }
 #con_con {
-  width: 100%;
-  height: 200px;
-  background: #666;
+  background: #f6fdff;
 }
 
 /* 컨테이너 */
@@ -71,8 +52,6 @@
 }
 
 /* 헤더 */
-.header {
-}
 .header .header-menu {
   text-align: right;
 }
@@ -141,5 +120,267 @@
 .header-icon .icon4:hover {
   background-position: -60px -180px;
 }
-.header-icon a span {
+
+/* float: left로 인한 영영깨짐(height:0) 방지법
+1. 깨지는 영역에 똑같이 float: left를 사용한다.(X) --> 모든 박스에 float: left를 사용하게 됩니다.
+2.float의 성질을 차단하는 clear: both;를 사용한다.(X) --> 내용이 많아지면 어떤 영역이 깨졌는지 찾기 어렵다.
+3.float을 사용한 상위 박스한테 overflow: hidden을 사용합니다. (O) --> 현재는 많이 사용하지만 2단 메뉴에서는 사용하기 어렵다.
+4.clearfix를 사용합니다. (O)
+*/
+
+/* 전체 메뉴 */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.nav > div h3 {
+  font-size: 18px;
+  color: #25a2d0;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.nav > .nav_sub1 {
+  width: 40%;
+}
+.nav > .nav_sub2 {
+  width: 40%;
+}
+.nav > .nav_sub3 {
+  width: 20%;
+}
+.nav > div > ol {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav > div > ol > li {
+  flex-basis: 50%;
+}
+.nav > div > ol > li > a:hover {
+  text-decoration: underline;
+}
+.nav > .nav_sub3 > ol > li {
+  flex-basis: 100%;
+}
+
+/* 타이틀 */
+#con_tit .tit {
+  position: relative;
+}
+#con_tit .tit h2 {
+  font-size: 40px;
+  text-align: center;
+  padding: 5px 0;
+  letter-spacing: 2px;
+  color: #2c94c4;
+  font-family: 'Nanum Brush Script', cursive;
+}
+#con_tit .tit .btn {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: url(../img/icon.png) no-repeat 0 -600px;
+}
+
+/* 배너 */
+.ban {
+  padding: 30px 0;
+  position: relative;
+}
+.ban .prev {
+  position: absolute;
+  top: 60px;
+  left: -60px;
+  width: 43px;
+  height: 43px;
+  background: url(../img/icon.png) no-repeat -150px 0;
+}
+.ban .prev:hover {
+  background-position: -193px 0;
+}
+.ban .next {
+  position: absolute;
+  top: 60px;
+  right: -60px;
+  width: 43px;
+  height: 43px;
+  background: url(../img/icon.png) no-repeat -150px -43px;
+}
+.ban .next:hover {
+  background-position: -193px -43px;
+}
+.ban ul {
+  display: flex;
+  justify-content: space-around;
+}
+.ban ul li {
+  width: 290px;
+}
+.ban ul li a img {
+  border: 4px solid #dcdcdc;
+}
+.ban ul li a img:hover {
+  border-color: #98bcdc;
+  transition: 0.5s;
+}
+
+/* 컨텐츠 영역 */
+.cont {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.cont .column {
+  width: 289px;
+  height: 363px;
+  margin: 0 30px 30px 0;
+  padding-right: 30px;
+  position: relative;
+}
+.cont .col1 {
+  border-right: 1px solid #c8c8c8;
+}
+.cont .col2 {
+  border-right: 1px solid #c8c8c8;
+}
+.cont .col3 {
+  margin-right: 0;
+  padding-right: 0;
+}
+.cont .col4 {
+  border-right: 1px solid #c8c8c8;
+}
+.cont .col5 {
+  border-right: 1px solid #c8c8c8;
+}
+.cont .col6 {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.cont .column .ico_img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url(../img/icon.png) no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.cont .column .ico_tit {
+  padding-left: 70px;
+  font-size: 16px;
+  color: #2c94c4;
+}
+.cont .column .ico_desc {
+  padding-left: 70px;
+  border-bottom: 1px solid #d0d0d0;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.cont .col1 .ico_img {
+  background-position: 0px -240px;
+}
+.cont .col2 .ico_img {
+  background-position: 0px -300px;
+}
+.cont .col3 .ico_img {
+  background-position: 0px -360px;
+}
+.cont .col4 .ico_img {
+  background-position: 0px -420px;
+}
+.cont .col5 .ico_img {
+  background-position: 0px -480px;
+}
+.cont .col6 .ico_img {
+  background-position: 0px -540px;
+}
+.cont .col1 .ico_img:hover {
+  background-position: -60px -240px;
+}
+.cont .col2 .ico_img:hover {
+  background-position: -60px -300px;
+}
+.cont .col3 .ico_img:hover {
+  background-position: -60px -360px;
+}
+.cont .col4 .ico_img:hover {
+  background-position: -60px -420px;
+}
+.cont .col5 .ico_img:hover {
+  background-position: -60px -480px;
+}
+.cont .col6 .ico_img:hover {
+  background-position: -60px -540px;
+}
+
+/* 게시판 */
+.notice {
+  position: relative;
+}
+.notice h4 {
+  font-size: 14px;
+  color: #0093bd;
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+.notice ul li {
+  /* 한 줄효과 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: url(../img/dot.gif) no-repeat 0 10px;
+  padding-left: 8px;
+}
+.notice ul li a {
+  font-size: 12px;
+}
+.notice a.more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  background: url(../img/icon.png) no-repeat -150px -90px;
+  width: 17px;
+  height: 17px;
+}
+.notice a.more:hover {
+  background-position: -167px -90px;
+}
+
+/* 게시판2 */
+.notice2 {
+  position: relative;
+  margin-top: 15px;
+}
+.notice2 h4 {
+  font-size: 14px;
+  color: #0093bd;
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+.notice2 ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.notice2 ul li a {
+  flex-basis: 65%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.notice2 ul li span {
+  flex-basis: 30%;
+}
+.notice2 .more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  background: url(../img/icon.png) no-repeat -150px -90px;
+  width: 17px;
+  height: 17px;
 }
