@@ -384,3 +384,275 @@
   width: 17px;
   height: 17px;
 }
+
+/* 게시판3 */
+.notice3 {
+  position: relative;
+}
+.notice3 h4 {
+  font-size: 14px;
+  color: #0093bd;
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+.notice3 ul li {
+  position: relative;
+  padding: 8px 0px 14px 60px;
+}
+.notice3 ul li a img {
+  width: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #0093bd;
+}
+.notice3 ul li a strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.notice3 ul li a span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+.notice3 a.more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  background: url(../img/icon.png) no-repeat -150px -90px;
+  width: 17px;
+  height: 17px;
+}
+
+/* 마우스 오버효과1 */
+.notice_hover {
+}
+.notice_hover h4 {
+  font-size: 14px;
+  color: #0093bd;
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+.notice_hover ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.notice_hover ul li {
+  width: 93px;
+  margin-right: 5px;
+  text-align: center;
+}
+.notice_hover ul li:nth-child(3) {
+  margin-right: 0;
+}
+.notice_hover ul li:nth-child(6) {
+  margin-right: 0;
+}
+.notice_hover ul li a {
+}
+.notice_hover ul li a span {
+  position: relative;
+  display: block;
+  width: 93px;
+  height: 93px;
+  line-height: 93px;
+}
+.notice_hover ul li a span img {
+  width: 100%;
+}
+.notice_hover ul li a span em {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  /* transition: 0.2s; */
+}
+
+.notice_hover ul li a span:hover em {
+  visibility: visible;
+}
+.notice_hover ul li a strong {
+  display: inline-block;
+  padding-top: 3px;
+  font-size: 12px;
+}
+
+/* 마우스 오버효과2 */
+.notice_hover ul li.hover2 a em {
+  position: absolute;
+  top: 73px;
+  height: 20px;
+  line-height: 20px;
+}
+
+/* 컨텐트 요소를 보이지 않게 하는 방법 
+1. display: none -- display: block (영역이 사라짐)
+2, viisibillity: hidden; -- visibillity: visible; (영역이 유지)
+3. opacity: 0; -- opacity: 1; (영역이 유지)
+4. width: 0; height: 0; overflow: hidden;
+*/
+
+/* 텝 메뉴 */
+.tab_menu {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 8px;
+  height: 105px;
+}
+.tab_menu ul {
+  overflow: hidden;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ccc;
+}
+.tab_menu ul li {
+  float: left;
+  border: 1px solid #ccc;
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+/* 마우스 오버 효과는 a태그만 먹히기 때문에 li에 주면 안됨 */
+.tab_menu ul li a {
+  padding: 5px 10px;
+  display: block;
+}
+.tab_menu ul li ul {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 269px;
+  border: 0;
+}
+.tab_menu ul li ul li {
+  float: none;
+  border: 0;
+  background: url(../img/dot.gif) no-repeat 9px 9px;
+  padding-left: 18px;
+}
+.tab_menu ul li ul li a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  padding: 0 0 3px 0;
+}
+.tab_menu ul li.active {
+  background: #2c94c4;
+}
+.tab_menu ul li.active a {
+  color: #fff;
+}
+.tab_menu ul li.active ul li a {
+  color: #333;
+}
+
+/* 게시판4 */
+.notice4 {
+  border: 1px solid #ccc;
+  margin-top: 15px;
+  box-sizing: border-box;
+  position: relative;
+}
+.notice4 h4 {
+  font-size: 14px;
+  color: #0093bd;
+  padding-bottom: 3px;
+  font-weight: 700;
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+}
+.notice4 h4 em {
+  color: #cf3292;
+}
+.notice4 ul {
+  padding: 10px;
+}
+.notice4 ul li {
+  display: flex;
+  justify-content: space-between;
+  background: url(../img/dot.gif) no-repeat 0px 10px;
+  padding-left: 10px;
+  padding-bottom: 2px;
+}
+.notice4 ul li a {
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.notice4 ul li span {
+  width: 30%;
+}
+.notice4 .more {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+}
+
+/* 갤러리 */
+.gallery {
+  border: 1px solid #ccc;
+  height: 254px;
+  position: relative;
+  overflow: hidden;
+}
+.gallery h4 {
+  font-size: 14px;
+  color: #0093bd;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0px 8px 11px;
+  font-weight: bold;
+}
+.gallery .gallery_btn {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+}
+.gallery .gallery_btn ul {
+  display: flex;
+  margin: 1px 2px;
+}
+.gallery .gallery_btn ul li a {
+  /* 크기는 a태그에 주는게 좋다 */
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../img/icon.png) no-repeat;
+}
+.gallery .gallery_btn ul li.gb_icon1 a {
+  background-position: -150px -120px;
+}
+.gallery .gallery_btn ul li.gb_icon2 a {
+  background-position: -150px -143px;
+}
+.gallery .gallery_btn ul li.gb_icon3 a {
+  background-position: -150px -166px;
+}
+.gallery .gallery_btn ul li.gb_icon4 a {
+  background-position: -150px -189px;
+}
+.gallery .gallery_btn ul li.gb_icon1 a:hover {
+  background-position: -173px -120px;
+}
+.gallery .gallery_btn ul li.gb_icon2 a:hover {
+  background-position: -173px -143px;
+}
+.gallery .gallery_btn ul li.gb_icon3 a:hover {
+  background-position: -173px -166px;
+}
+.gallery .gallery_btn ul li.gb_icon4 a:hover {
+  background-position: -173px -189px;
+}
+.gallery .gallery_btn ul li a span {
+}
+.gallery .gallery_img {
+  width: 100%;
+}
