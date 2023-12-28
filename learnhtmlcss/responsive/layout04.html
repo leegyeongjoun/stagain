@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout04</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #wrap {
+      width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      width: 100%;
+      height: 150px;
+      background: #81c784;
+    }
+    main {
+      display: flex;
+    }
+    aside {
+      width: 30%;
+      height: 700px;
+      background: #66bb6a;
+    }
+    section {
+      width: 40%;
+      height: 700px;
+      background: #4caf50;
+    }
+    article {
+      width: 30%;
+      height: 700px;
+      background: #43a047;
+    }
+    footer {
+      width: 100%;
+      height: 150px;
+      background: #388e3c;
+    }
+
+    @media (max-width: 1220px) {
+      header {
+        height: 150px;
+      }
+      main {
+        flex-wrap: wrap;
+      }
+      aside {
+        width: 35%;
+      }
+      section {
+        width: 65%;
+      }
+      article {
+        width: 100%;
+        height: 200px;
+      }
+    }
+    @media (max-width: 768px) {
+      header {
+        height: 300px;
+      }
+      main {
+        flex-wrap: wrap;
+      }
+      aside {
+        width: 100%;
+        height: 500px;
+      }
+      section {
+        width: 100%;
+        height: 500px;
+      }
+      article {
+        width: 100%;
+        height: 200px;
+      }
+    }
+    @media (max-width: 480px) {
+      header {
+        height: 300px;
+      }
+    }
+  </style>
+  <body>
+    <div id="wrap">
+      <header></header>
+      <main>
+        <aside></aside>
+        <section></section>
+        <article></article>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>

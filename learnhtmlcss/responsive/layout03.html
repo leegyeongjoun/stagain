@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout03</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      background: #f3e5f5;
+    }
+    #wrap {
+      width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      width: 100%;
+      height: 100px;
+      background: rgb(23, 132, 221);
+    }
+    aside {
+      width: 30%;
+      height: 700px;
+      background: rgb(32, 100, 155);
+      float: left;
+    }
+    section {
+      width: 70%;
+      height: 700px;
+      background: rgb(31, 63, 88);
+      float: left;
+    }
+    footer {
+      width: 100%;
+      height: 100px;
+      background: rgb(14, 27, 38);
+      clear: both;
+    }
+    /* 화면 너비 0 ~ 1200px */
+    @media (max-width: 1220px) {
+      #wrap {
+        width: 95%;
+      }
+    }
+
+    /* 화면 너비 768px ~ 1199px */
+    @media (max-width: 768px) {
+      #wrap {
+        width: 100%;
+      }
+    }
+
+    /* 화면 너비 480px ~ 767px */
+    @media (max-width: 480px) {
+      header {
+        height: 300px;
+      }
+      aside {
+        width: 100%;
+        float: none;
+        height: 300px;
+      }
+      section {
+        width: 100%;
+        float: none;
+        height: 300px;
+      }
+    }
+  </style>
+  <body>
+    <div id="wrap">
+      <header></header>
+      <aside></aside>
+      <section></section>
+      <footer></footer>
+    </div>
+  </body>
+</html>
