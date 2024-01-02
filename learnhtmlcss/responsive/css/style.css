@@ -1,0 +1,42 @@
+/* 레이아웃 */
+#header {
+  background: url(../img/header_bg.jpg) repeat-x center top;
+}
+
+/* 컨테이너(가운데영역) */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* 헤더 영역 */
+.header {
+  height: 327px;
+}
+.header > .header_menu {
+  text-align: right;
+}
+.header > .header_menu a {
+  display: inline-block;
+  color: #fff;
+  /* 인라인 성질은 패딩이 먹히지 않음으로 inline-block을 해줘야함 */
+  padding: 8px 0 6px 10px;
+  font-family: 'Nanum Brush Script', cursive;
+  font-family: 'Single Day', cursive;
+  font-size: 18px;
+}
+.header > .header_menu a:hover {
+  color: #ccc;
+  transition: 0.3s;
+}
+
+@media (max-width: 1220px) {
+  .container {
+    width: 100%;
+  }
+  /* 컨테이너에 일일히 패딩을 넣기보단 안에 넣으면 좋음 */
+  .row {
+    padding: 0 15px;
+  }
+}
